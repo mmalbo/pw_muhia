@@ -1,0 +1,9 @@
+/contact/migrations
+/enlac_preg/migrations
+/equipo/migrations
+/galeria/migrations
+/gestion/migrations
+/news/migrations
+/pages/migrations
+/portal/migrations
+/registration/migrations

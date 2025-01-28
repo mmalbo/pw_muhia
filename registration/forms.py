@@ -5,7 +5,7 @@ from .models import Profile
 
 class UserCreationFormWithEmail(UserCreationForm):
     #{{ form.as_p }}
-    email = forms.EmailField(required=True, help_text="Requerido. 254 caracteres como máximo y debe ser un emai válido.")
+    email = forms.EmailField(required=True, help_text="Requerido. 254 caracteres como máximo y debe ser un email válido.")
 
     class Meta:
         model = User

@@ -9,6 +9,7 @@ class Pregunta(models.Model):
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de edición")
 
     class Meta:
+        db_table = 'pregunta'
         verbose_name = "pregunta"
         verbose_name_plural = "Preguntas"
         ordering = ['-created']
@@ -22,6 +23,7 @@ class Enlaces(models.Model):
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
 
     class Meta:
+        db_table = 'enlace'
         verbose_name = "enlace"
         verbose_name_plural = "Enlaces"
         ordering = ['-created']

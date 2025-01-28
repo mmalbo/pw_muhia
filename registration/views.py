@@ -1,6 +1,7 @@
 from typing import Any
 from django.db.models.base import Model as Model
 from django.db.models.query import QuerySet
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import CreateView
@@ -79,3 +80,11 @@ class EmailUpdate(UpdateView):
 def passReset(request):
     template_name = 'registration/password_reset_form.html'
     return render(request, template_name, locals())
+
+def superuser_only(function=None):
+    def _inner(request, *args, **kwargs):
+        if not request.user.is_staff:
+            success_url = reverse_lazy('login_index')
+            return HttpResponseRedirect(success_url)
+        return function(request, *args, **kwargs)
+    return _inner

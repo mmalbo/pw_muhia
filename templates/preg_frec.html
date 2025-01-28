@@ -11,22 +11,19 @@
     <section id="sobre_nosotros" class="page-section">
         <div class="container py-3 py-xl-3">
             <div class="row mb-1">
-                <div class="col-md-8 col-xl-6 text-center mx-auto" data-aos="zoom-in" data-aos-delay="50">
+                <div class="col mx-auto" data-aos="zoom-in" data-aos-delay="50" style="text-align: justify;">
                     <h2 class="font-weight-bold" style="font-family: 'Abril Fatface', serif;">Preguntas frecuentes</h2>
                     <ul>
                         <br>
                         {%for p in Preg%}
-                        <h4 class="font-weight-bold">{{p.pregunta}}</h4>
-                        <p>{{p.respuesta}}.</p>
-                        <br>
+                            <h4 class="font-weight-bold">{{p.pregunta}}</h4>
+                            <p>{{p.respuesta}}.</p>
+                            <br>
                         {% endfor%}
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="intro"></div>
-        </div>
-    </section>
+   </section>
 
 {% endblock %}
