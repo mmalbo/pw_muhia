@@ -2,7 +2,7 @@
 <html lang="es">
 
 {% load static %}
-{% load bootstrap5 %}
+{% load django_bootstrap5 %}
 
 <head>
     <meta charset="utf-8">
@@ -98,7 +98,7 @@
                                         <li><a  class="dropdown-item" href="{% url 'noti_curios' %}">Curiosidades</a></li>
                                     </ul>   
                             </div>
-                            <a class="nav-item nav-link" style="font-family:roboto; color: #153d50; margin-right: 10px;" href="{% url 'preguntas' %}">Ayuda</a>
+                            <a class="nav-item nav-link" style="font-family:roboto; color: #153d50; margin-right: 10px;" href="{% url 'preguntas' %}">FAQ</a>
                             <!-- <li class="nav-item"><a class="nav-link text-light" href="{% url 'contacto' %}">Contacto</a></li>-->
                             {% if request.user.is_superuser or request.user.is_staff %}
                             <div class="nav-item dropdown">
