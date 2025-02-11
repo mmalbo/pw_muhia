@@ -55,17 +55,23 @@
       <div class="carousel-inner">
           {% for i in g_imagenes %}
           {% if i.activo %}
+          {% if i.is_princ %}
           <div class="carousel-item active" style="width: 100%;">
             <img class="img-fluid" src="{{ i.get_image_url }}" alt="{{i.title}}">
           </div>
+          {% else %}
+          <div class="carousel-item" style="width: 100%;">
+            <img class="img-fluid" src="{{ i.get_image_url }}" alt="{{i.title}}">
+          </div>
+          {% endif %}
           {% endif %}
           {% endfor%}
-        <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+        <a class="carousel-control-prev" href="#carrusel_imagenes" data-slide="prev">
           <div class="btn btn-dark" style="width: 45px; height: 45px;">
             <span class="carousel-control-prev-icon mb-n2"></span>
           </div>
         </a>
-        <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+        <a class="carousel-control-next" href="#carrusel_imagenes" data-slide="next">
           <div class="btn btn-dark" style="width: 45px; height: 45px;">
             <span class="carousel-control-next-icon mb-n2"></span>
           </div>

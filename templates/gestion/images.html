@@ -31,6 +31,7 @@
             <tr>
               <th width="35%">Nombre</th>
               <th>Imagen</th>
+              <th>Principal</th>
               <th>Activo</th>
               <th>Acciones</th>
             </tr>
@@ -40,7 +41,8 @@
           {% for elem in object_list %}
             <tr>
               <td>{{ elem.title }}</td>
-              <td><img src="media/{{elem.image}}" alt="{{elem.image}}" class="img-fluid" width="7%"></td>
+              <td><img src="{{elem.get_image_url}}" alt="{{elem.image}}" class="img-fluid" width="15%"></td>
+              <td>{% if elem.is_princ %} Si {% else %} No {% endif %}</td>
               <td>{% if elem.activo %} Si {% else %} No {% endif %}</td>
               <td>
                 <!-- Usaremos un formulario que realizará la tarea de eliminar un registro o jugo desde la misma tabla HTML -->                        

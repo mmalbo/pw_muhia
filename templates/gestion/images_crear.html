@@ -37,6 +37,10 @@
           {{ form.activo|add_class:"checkbox" }} <!-- Usamos la librería 'widget_tweaks' para crear esta caja de texto --> 
         </div>
         <div class="form-group">
+          <label for="activo" class="txt_negrita">Principal</label>
+          {{ form.is_princ|add_class:"checkbox" }} <!-- Usamos la librería 'widget_tweaks' para crear esta caja de texto --> 
+        </div>
+        <div class="form-group">
           <label for="img" class="txt_negrita">Imagen</label>
           {{ form.image|add_class:"form-control mb-3" }} <!-- Usamos la librería 'widget_tweaks' para crear esta caja de texto -->
         </div>

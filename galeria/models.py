@@ -6,7 +6,7 @@ class imagenes(models.Model):
     title = models.CharField(null = False, blank = False, max_length = 200, verbose_name = "Nombre")
     image = models.ImageField(null = False, upload_to = "galeria", verbose_name= "Imagen")  
     activo = models.BooleanField(null = False, default = True)
-    """is_product = models.BooleanField(null=True, blank= True, verbose_name="Para la sección productos")"""
+    is_princ = models.BooleanField(null=True, blank= True, verbose_name="Principal")
     created = models.DateTimeField(auto_now = True, verbose_name = "Fecha de creación")
 
     class Meta:
@@ -23,14 +23,14 @@ class imagenes(models.Model):
         if self.image and hasattr(self.image, 'url'):
             return self.image.url
         else:
-            return "/static/img/carousel/carousel.jpeg"
-            
+            return "/static/img/carousel/carousel.jpeg"        
     
 class banner(models.Model):
     title = models.CharField(null = False, blank = False, max_length = 200, verbose_name = "Nombre")
     image = models.ImageField(null = False, upload_to = "banners", verbose_name= "Imagen")
     activo = models.BooleanField(null = False, default = True)
     pcpal = models.BooleanField(null = False, default = False)
+    enlace = models.URLField(null = True, blank = False, verbose_name = "Enlace a las redes")
     created = models.DateTimeField(auto_now = True, verbose_name = "Fecha de creación")
 
     class Meta:
