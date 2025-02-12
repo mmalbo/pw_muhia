@@ -30,7 +30,7 @@ class banner(models.Model):
     image = models.ImageField(null = False, upload_to = "banners", verbose_name= "Imagen")
     activo = models.BooleanField(null = False, default = True)
     pcpal = models.BooleanField(null = False, default = False)
-    enlace = models.URLField(null = True, blank = False, verbose_name = "Enlace a las redes")
+    enlace = models.URLField(null = False, blank = False, verbose_name = "Enlace a las redes", default = "https://produccionesmuhia.ca")
     created = models.DateTimeField(auto_now = True, verbose_name = "Fecha de creación")
 
     class Meta:

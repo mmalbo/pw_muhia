@@ -17,11 +17,11 @@
         {% if i.activo %}
         {% if i.pcpal %}
           <div class="carousel-item active" style="width: 100%;">
-            <img class="img-fluid" src="{{ i.get_image_url }}" alt="{{i.title}}">
+            <a href="{{ i.enlace }}"><img class="img-fluid" src="{{ i.get_image_url }}" alt="{{i.title}}"></a>
           </div>
           {% else %}
           <div class="carousel-item" style="width: 100%;">
-            <img class="img-fluid" src="{{ i.get_image_url }}" alt="{{i.title}}">
+            <a href="{{ i.enlace }}"><img class="img-fluid" src="{{ i.get_image_url }}" alt="{{i.title}}"></a>
           </div>
         {% endif %}
         {% endif %}
@@ -153,7 +153,7 @@
             <div class="swiper-wrapper">
               {% for i in event %}
               <div class="swiper-slide card" style="top: 0px; border: 0px;">
-                <img class="card-img-top img-fluid d-block" id="banner_tarjeta_noticia" data-aos="zoom-in" data-aos-delay="100" src="{{ i.get_image_url }}" width="60%" height="40%">
+                <a href="{{i.enlace}}"><img class="card-img-top img-fluid d-block" id="banner_tarjeta_noticia" data-aos="zoom-in" data-aos-delay="100" src="{{ i.get_image_url }}" width="60%" height="40%"></a>
                   <div class="card-body pt-3">
                       <h4 class="font-weight-bold card-title" style="font-family: Roboto, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: #153d50; font-variant: small-caps;">{{i.title}}</h4>
                       <p>{{i.description}}</p>
@@ -176,7 +176,7 @@
 <!--style="margin-left: 5%;"-->
 <section id="Eventos_curiosidades" class="page-section py-0 my-0"> 
   <div class="row py-5">
-    <div class="col-12 col-lg-4 col-md-4 simple-slider" id="carrusel_eventos" >
+    <div class="col-12 col-lg-4 col-md-4 simple-slider" id="carrusel_notas" >
       <div class="row mb-1 text-center mx-auto" data-aos="zoom-in" data-aos-delay="50">
         <h3 class="font-weight-bold text-center" style="font-family: roboto; color: #153d50;">Notas Interesantes</h3>
       </div>
@@ -185,7 +185,7 @@
           {% for elem in curios %}
           {% if elem.activo%}
           <div class="swiper-slide card" style="top: 0px; border: 0px;">
-            <img class="card-img-top img-fluid d-block" id="banner_tarjeta_noticia" data-aos="zoom-in" data-aos-delay="100" src="{{ elem.get_image_url }}" width="60%" height="40%">
+            <a href="content/{{elem.id}}"><img class="card-img-top img-fluid d-block" id="banner_tarjeta_noticia" data-aos="zoom-in" data-aos-delay="100" src="{{ elem.get_image_url }}" width="60%" height="40%"></a>
               <div class="card-body pt-3">
                   <h4 class="font-weight-bold card-title" style="font-family: Roboto, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: #153d50; font-variant: small-caps;">{{elem.title}}</h4>
                   <p>{{elem.subtitle}}</p>

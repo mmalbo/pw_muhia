@@ -36,7 +36,7 @@ class Event(models.Model):
     image = models.ImageField(verbose_name="Imagen", upload_to="Contenido")
     start_time = models.DateTimeField(blank = False, null=True, verbose_name="Fecha del evento")#, widget=forms.DateInput
     end_time = models.DateTimeField(blank = False, null=True, verbose_name="Fecha del evento")
-    enlace = models.URLField(null = True, blank = False, verbose_name = "Enlace a las redes")
+    enlace = models.URLField(null = False, blank = False, verbose_name = "Enlace a las redes", default = "https://produccionesmuhia.ca/eventos/")
     created = models.DateTimeField(auto_now=True, verbose_name="Fecha de creación")
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de edición")
 
