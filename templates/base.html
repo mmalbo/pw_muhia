@@ -46,7 +46,6 @@
             <div class="col-lg-2 d-none d-lg-block">
                 <div id="logo_menu_sup" class="container d-xl-flex align-items-xl-start collapse style="background: transparent">
                     <a class="d-xl-flex justify-content-xl-start logo d-flex align-items-center" id="logo" href="{% url 'inicio' %}" style="width: 40%;"><img class="flex-grow-1" id="logo" src={% static "img/logos/Isologoportal.png" %} width="70%" href="https://produccionesmuhia.ca"></a>
-                    
                 </div>
             </div>
             <div class="col-lg-3 d-none d-lg-block">
@@ -78,25 +77,25 @@
                             <a class="nav-item nav-link" style="font-family:roboto; color: #153d50; margin-right: 10px;" href="{% url 'inicio' %}">Inicio </a>
                             <div class="nav-item dropdown" style="display: inline-flexbox; position: relative;">
                                 <a class="nav-item nav-link dropdown-toggle" style="font-family:roboto; color: #153d50; margin-right: 10px; " data-toggle="dropdown" id="quienes">¿Quiénes somos?</a>
-                                    <ul class="dropdown-menu" aria-labelledby="quienes" style="font-family:roboto; color: #153d50; background-color: #fff; border: 1px solid #ccc; box-sizing: content-box;">
-                                        <li><a  class="dropdown-item " href="{% url 'historia' %}" style="white-space: nowrap;">Nuestra historia</a></li>
-                                        <li><a  class="dropdown-item" href="{% url 'equipo' %}" style="white-space: nowrap;">Nuestro equipo</a></li>
-                                    </ul>
+                                    <div class="dropdown-menu" aria-labelledby="quienes" style="font-family:roboto; color: #153d50; background-color: #fff; border: 1px solid #ccc; box-sizing: content-box;">
+                                        <a class="dropdown-item" href="{% url 'historia' %}"><i class="dropdown-item"></i>Nuestra historia</a>
+                                        <a class="dropdown-item" href="{% url 'equipo' %}"><i class="dropdown-item"></i>Nuestro equipo</a>
+                                    </div>
                             </div>
                             <div class="nav-item dropdown" style="display: inline-flexbox; position: relative;">
                                 <a class="nav-item nav-link dropdown-toggle" style="font-family:roboto; color: #153d50; margin-right: 10px;" data-toggle="dropdown" id="productos">¿Qué ofrecemos?</a>
-                                    <ul class="dropdown-menu dropdown-menu-rigth" aria-labelledby="productos" style="font-family:roboto; color: #153d50; position: absolute; background-color: #fff; border: 1px solid #ccc; box-sizing: content-box;">
-                                        <li><a  class="dropdown-item" href="#">Catálogos de productos</a></li>
-                                        <li><a  class="dropdown-item" href="https://tienda.produccionesmuhia.ca">Tienda virtual</a></li>
-                                        <li><a  class="dropdown-item" href="{% url 'tiendas-fisicas' %}">Tiendas físicas</a></li>
-                                    </ul>
+                                    <div class="dropdown-menu dropdown-menu-rigth" aria-labelledby="productos" style="font-family:roboto; color: #153d50; position: absolute; background-color: #fff; border: 1px solid #ccc; box-sizing: content-box;">
+                                        <a class="dropdown-item" target="_blank" href="https://tienda.produccionesmuhia.ca/catalogo/todos/"><i class="dropdown-item"></i>Catálogos de productos</a>
+                                        <a class="dropdown-item" target="_blank" href="https://tienda.produccionesmuhia.ca/"><i class="dropdown-item"></i>Tienda virtual</a>
+                                        <a class="dropdown-item" target="_blank" href="https://tienda.produccionesmuhia.ca/tiendas/"><i class="dropdown-item"></i>Tiendas físicas</a>
+                                    </div>
                             </div>
                             <div class="nav-item dropdown" style="display: inline-block; position: relative;">
-                                <a class="nav-item nav-link dropdown-toggle" style="font-family:roboto; color: #153d50; margin-right: 10px; " data-toggle="dropdown" id="novedades">Novedades</a>
-                                    <ul class="dropdown-menu" aria-labelledby="novedades" style="font-family:roboto; color: #153d50; background-color: #fff; border: 1px solid #ccc; box-sizing: content-box;">
-                                        <li><a  class="dropdown-item" href="{% url 'event' %}">Eventos e Intercambios</a></li>
-                                        <li><a  class="dropdown-item" href="{% url 'noti_curios' %}">Curiosidades</a></li>
-                                    </ul>   
+                                <a class="nav-link dropdown-toggle" style="font-family:roboto; color: #153d50; margin-right: 5px;" data-toggle="dropdown" id="gestion">Novedades</a>
+                                <div class="dropdown-menu dropdown-menu-left rounded-0 m-0">
+                                   <a class="dropdown-item" href="{% url 'event' %}"><i class="dropdown-item"></i>Eventos e Intercambios</a>
+                                   <a class="dropdown-item" href="{% url 'noti_curios' %}"><i class="dropdown-item"></i>Curiosidades</a>
+                                </div>
                             </div>
                             <a class="nav-item nav-link" style="font-family:roboto; color: #153d50; margin-right: 10px;" href="{% url 'preguntas' %}">FAQ</a>
                             <!-- <li class="nav-item"><a class="nav-link text-light" href="{% url 'contacto' %}">Contacto</a></li>-->
@@ -104,8 +103,8 @@
                             <div class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" style="font-family:roboto; color: #153d50; margin-right: 5px;" data-toggle="dropdown" id="gestion">Gestión</a>
                                 <div class="dropdown-menu dropdown-menu-left rounded-0 m-0">
-                                   <a  class="dropdown-item" href="{% url 'herramientas' %}"><i class="dropdown-item"></i>Herramientas</a>
-                                   <a  class="dropdown-item" href="{% url 'gestion' %}"><i class="dropdown-item"></i>Contenidos</a>
+                                   <a  class="dropdown-item" target="_blank" href="{% url 'herramientas' %}"><i class="dropdown-item"></i>Herramientas</a>
+                                   <a  class="dropdown-item" target="_blank" href="{% url 'gestion' %}"><i class="dropdown-item"></i>Contenidos</a>
                                 </div>
                             </div>
                             {% endif %}
