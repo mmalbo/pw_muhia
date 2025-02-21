@@ -7,3 +7,13 @@
 /pages/migrations
 /portal/migrations
 /registration/migrations
+*.log
+*.sqlite3
+*.pyc
+__pychache__/
+.env
+venv/
+env/
+media/
+static/
+proyectos_muhia/settings.py 
