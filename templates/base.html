@@ -83,11 +83,11 @@
                                     </div>
                             </div>
                             <div class="nav-item dropdown" style="display: inline-flexbox; position: relative;">
-                                <a class="nav-item nav-link dropdown-toggle" style="font-family:roboto; color: #153d50; margin-right: 10px;" data-toggle="dropdown" id="productos">¿Qué ofrecemos?</a>
+                                <a class="nav-item nav-link dropdown-toggle" style="font-family:roboto; color: #153d50; margin-right: 10px;" data-toggle="dropdown" id="productos">Tiendas</a>
                                     <div class="dropdown-menu dropdown-menu-rigth" aria-labelledby="productos" style="font-family:roboto; color: #153d50; position: absolute; background-color: #fff; border: 1px solid #ccc; box-sizing: content-box;">
-                                        <a class="dropdown-item" target="_blank" href="https://tienda.produccionesmuhia.ca/catalogo/todos/"><i class="dropdown-item"></i>Catálogos de productos</a>
                                         <a class="dropdown-item" target="_blank" href="https://tienda.produccionesmuhia.ca/"><i class="dropdown-item"></i>Tienda virtual</a>
-                                        <a class="dropdown-item" target="_blank" href="https://tienda.produccionesmuhia.ca/tiendas/"><i class="dropdown-item"></i>Tiendas físicas</a>
+                                        <a class="dropdown-item" target="_blank" href="https://tienda.produccionesmuhia.ca/tiendas/planta/"><i class="dropdown-item"></i>Fábrica</a>
+                                        <a class="dropdown-item" target="_blank" href="https://tienda.produccionesmuhia.ca/tiendas/guanabacoa/"><i class="dropdown-item"></i>Calle 8. Chibás</a>
                                     </div>
                             </div>
                             <div class="nav-item dropdown" style="display: inline-block; position: relative;">
@@ -97,7 +97,7 @@
                                    <a class="dropdown-item" href="{% url 'noti_curios' %}"><i class="dropdown-item"></i>Curiosidades</a>
                                 </div>
                             </div>
-                            <a class="nav-item nav-link" style="font-family:roboto; color: #153d50; margin-right: 10px;" href="{% url 'preguntas' %}">FAQ</a>
+                            <a class="nav-item nav-link" style="font-family:roboto; color: #153d50; margin-right: 10px;" href="{% url 'preguntas' %}">Preguntas frecuentes</a>
                             <!-- <li class="nav-item"><a class="nav-link text-light" href="{% url 'contacto' %}">Contacto</a></li>-->
                             {% if request.user.is_superuser or request.user.is_staff %}
                             <div class="nav-item dropdown">
@@ -128,8 +128,8 @@
                         <div id="menu entrar" class="collapse navbar-collapse align-items-end">
                             <div id="registro_autenticacion" class="d-xl-flex justify-content-xl-end social-links d-none d-md-flex align-items-end">
                                 {% if not request.user.is_authenticated %}
-                                   <a href="{% url 'login' %}" class="nav-item nav-link" style="font-family:roboto; color: #153d50; margin-right: 10px;">Entrar</a>
-                                   <a href="{% url 'signup' %}" class="nav-item nav-link" style="font-family:roboto; color: #153d50; margin-right: 10px;">Registrarse</a>
+                                   <a href="{% url 'login' %}" class="nav-item nav-link" style="font-family:roboto; color: #153d50; margin-right: 10px;">Admin</a>
+<!--                                    <a href="{% url 'signup' %}" class="nav-item nav-link" style="font-family:roboto; color: #153d50; margin-right: 10px;">Registrarse</a> -->
                                 {% else %}
                                    <a href="{% url 'profile' %}" class="nav-item nav-link" style="font-family:roboto; color: #153d50; margin-right: 10px;">Perfil</a>
                                    <a href="{% url 'logout' %}" class="nav-item nav-link" style="font-family:roboto; color: #153d50; margin-right: 10px;">Salir</a>
