@@ -49,7 +49,7 @@
   </div>  
   <div class="row">
     <div class="col-12 col-lg-6 col-md-6" >
-      <img class="rounded img-fluid" src="{% static 'img/info_rectangular.webp' %}" style="align-content: center;">
+      <img class="rounded img-fluid" src="{% static 'img/info_rectangular2.webp' %}" style="align-content: center;">
     </div>
     <div class="carousel slider col-12 col-lg-6 col-md-6 " id="carrusel_imagenes">
       <div class="carousel-inner">
@@ -57,7 +57,7 @@
           {% if i.activo %}
           {% if i.is_princ %}
           <div class="carousel-item active" style="width: 100%;">
-            <img class="img-fluid" src="{{ i.get_image_url }}" alt="{{i.title}}">
+            <a target="_blank" href="https://youtu.be/208EED3SR9E?si=IJr8FDC80I44dVAR"><img class="img-fluid" src="{{ i.get_image_url }}" alt="{{i.title}}"></a>  
           </div>
           {% else %}
           <div class="carousel-item" style="width: 100%;">
@@ -146,7 +146,6 @@
           </div>
         </div>
       </div>
-      
       <div class="col-12 col-lg-4 col-md-4 simple-slider" id="carrusel_eventos">
         <div class="row mb-1 text-center mx-auto" data-aos="zoom-in" data-aos-delay="50">
           <h3 class="font-weight-bold text-center" style="font-family: roboto; color: #153d50;">Intercambios</h3>
@@ -155,11 +154,11 @@
             <div class="swiper-wrapper">
               {% for i in event %}
               <div class="swiper-slide card" style="top: 0px; border: 0px;">
-                <a href="{{i.enlace}}"><img class="card-img-top img-fluid d-block" id="banner_tarjeta_noticia" data-aos="zoom-in" data-aos-delay="100" src="{{ i.get_image_url }}" width="60%" height="40%"></a>
+                <a href="{{i.enlace}}" target="_blank"><img class="card-img-top img-fluid d-block" id="banner_tarjeta_noticia" data-aos="zoom-in" data-aos-delay="100" src="{{ i.get_image_url }}" width="60%" height="40%"></a>
                   <div class="card-body pt-3">
                       <h4 class="font-weight-bold card-title" style="font-family: Roboto, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: #153d50; font-variant: small-caps;">{{i.title}}</h4>
                       <p>{{i.description}}</p>
-                      <a href="{{i.enlace}}" style="color: var(--purple);">Leer mas&nbsp;
+                      <a href="{{i.enlace}}" target="_blank" style="color: var(--purple);">Leer mas&nbsp;
                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
                           <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
                         </svg></a>  
@@ -178,7 +177,7 @@
 <!--style="margin-left: 5%;"-->
 <section id="Eventos_curiosidades" class="page-section py-0 my-0"> 
   <div class="row py-5">
-    <div class="col-12 col-lg-4 col-md-4 simple-slider" id="carrusel_notas" >
+    <div class="col-md-4 simple-slider" id="carrusel_notas" >
       <div class="row mb-1 text-center mx-auto" data-aos="zoom-in" data-aos-delay="50">
         <h3 class="font-weight-bold text-center" style="font-family: roboto; color: #153d50;">Notas Interesantes</h3>
       </div>
@@ -205,19 +204,54 @@
         <div class="swiper-button-next"></div>
       </div>
     </div>
-    <div class="col-12 col-lg-8 col-md-8 simple-slider" id="carrusel_catalogo">
-      <div class="swiper-container slider1">
-        <div class="swiper-wrapper">
-          {% for i in catalog %}
-          {% if i.activo %}
-          <div data-aos="slide-left" data-aos-duration="100" data-aos-delay="20" class="swiper-slide" style = "background: url('{{i.get_image_url}}') 50% 50% / cover no-repeat;"></div>
-          {% endif %}
-          {% endfor%}
+    <div class="col-md-4 " id="Texto relleno">
+      <div class="card-body pt-3">
+        <p class="card-text" style="font-family: roboto; color: #153d50;line-height: normal; text-align: justify;">
+          Producciones MUHIA SRL es una empresa con capital 100% privado, que se dedica a la elaboración y comercialización de productos de limpieza y desinfección de alta gama, destinados al uso doméstico, institucional y hotelero. Contamos también con líneas de aseo, belleza personal y línea automotriz.
+        </p>
+        <p class="card-text" style="font-family: roboto; color: #153d50;line-height: normal; text-align: justify;">
+          Contamos con una fábrica de productos, 3 puntos de venta físicos y nuestra tienda virtual. Nuestro equipo de comercialización y marketing 
+          está a su disposición para atender cualquier pedido en el menor tiempo posible.        
+        </p>
+        <div class="row">
+          <ul class="col-6 " style="font-family: Roboto, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; list-style: none; line-height: 250%; margin: 0; padding: 0%;">
+              <li><a class="btn btn-block align-items-end" target="_blank" style="background:#153d50; width: fit-content; height: fit-content; color: white; line-height: 100%;" href="https://tienda.produccionesmuhia.ca/">Tienda virtual</a></li>
+          </ul>
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+      </br>
+        <p class="card-text" style="font-family: roboto; color: #153d50;line-height: normal; text-align: justify;">
+          Usted tiene la posibilidad de emitir sus criterios y sugerencia las 24 horas del día, a través de nuestras redes sociales o con mensaje directo 
+          a nuestro correo institucional. 
+        </p>
+        <div class="row">
+          <ul class="col-10 " style="font-family: Roboto, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; list-style: none; line-height: 250%; margin: 0; padding: 0%;">
+              <li><a class="btn btn-block align-items-end" target="_blank" style="background:#153d50; width: fit-content; height: fit-content; color: white; line-height: 100%;" href="https://produccionesmuhia.ca/contacto/">comercial@produccionesmuhia.ca</a></li>
+          </ul>
+        </div> 
+    </div>
+    </div>
+    <div class="carousel slider col-md-4 " id="carrusel_catalogo">
+      {% for i in catalog %}
+      {% if i.activo %}
+      <div class="carousel-item {% if forloop.first %} active {% endif %}" style="width: 100%;">
+        <div class="row mx-0">
+          <div class="col-md-12">
+            <img class="img-fluid" src="{{i.get_image_url}}" alt="{{i.title}}">  
+          </div>
+        </div>
       </div>
+      {% endif %}
+      {% endfor %}
+      <a class="carousel-control-prev" href="#carrusel_catalogo" data-slide="prev">
+        <div class="btn btn-dark" style="width: 45px; height: 45px;">
+          <span class="carousel-control-prev-icon mb-n2"></span>
+        </div>
+      </a>
+      <a class="carousel-control-next" href="#carrusel_catalogo" data-slide="next">
+        <div class="btn btn-dark" style="width: 45px; height: 45px;">
+          <span class="carousel-control-next-icon mb-n2"></span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
