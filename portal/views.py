@@ -69,3 +69,6 @@ def preguntas(request):
 def contacto(request):
     return render(request, "contacto.html", {})
 #return HttpResponse("Hola mundo. Al fin tenemos una aplicacion visible.")
+
+def solicitud_curso(request):
+    return render(request, "solicitud_curso.html", locals())
