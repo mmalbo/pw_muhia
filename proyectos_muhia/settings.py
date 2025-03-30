@@ -66,12 +66,13 @@ INSTALLED_APPS = [
     'portal.apps.PortalConfig',
     'contact.apps.ContactConfig',
     'news.apps.NewsConfig',
-    'pages',#.apps.PagesCongig',
+    'pages',
     'registration.apps.RegistrationConfig',
     'galeria.apps.GaleriaConfig',
     'enlac_preg.apps.EnlacPregConfig',
     'gestion.apps.GestionConfig',
     'equipo.apps.EquipoConfig',
+    'servicio.apps.ServicioConfig',
 ]
 
 MIDDLEWARE = [
