@@ -10,6 +10,7 @@ class Curio(models.Model):
     subtitle = models.CharField(max_length=200, verbose_name="Subtítulo")
     content = CKEditor5Field(default = "Texto", verbose_name="Contenido")
     image = models.ImageField(verbose_name="Imagen", upload_to="anuncion_evenet")
+    enlace = models.URLField(null = False, blank = False, verbose_name = "Enlace a las redes", default = "https://produccionesmuhia.ca/curiosidades/")
     activo = models.BooleanField(verbose_name="Activa",null=True, default=True)
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de edición")

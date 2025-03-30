@@ -8,7 +8,7 @@ from django.shortcuts import render
 class CrearSoicitudView(CreateView):
     model = Solicitud
     form_class = SolicitudForm
-    success_url = reverse_lazy('gestion')
+    success_url = reverse_lazy('inicio')
 
     """ def form_valid(self, form):
         form.instance.usuario = self.request.user
